@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<title>Enquiry!</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.required {
+  color: red;
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'gym'%}"><b>SHOURYA </b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+             -->
+             <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"><b>Training</b> </a></li>
+                <li><a class="dropdown-item" href="#"><b>Live Project Training</b></a></li>
+                
+                <li><a class="dropdown-item" href="#"><b>Assignment & Exercise</b> </a></li>
+                <li><a class="dropdown-item" href="#"><b>Online Study Material</b> </a></li>
+                <li><a class="dropdown-item" href="#"><b>Free Demo Classes</b> </a></li>
+                <li><a class="dropdown-item" href="#"><b>Interview Preparation</b> </a></li>
+
+
+
+                
+              </ul>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link active"   href="#">About Us</a>
+              </li>
+            
+              
+              
+              <!-- <li class="nav-item">
+                <a class="nav-link active"   href="{% url 'regiterdetails' %}"><b>Register Now</b></a>
+              </li> -->
+
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+
+<div class="container">
+  <form action="{% url 'regiterdetails' %}" method="post">
+    <label for="fname">Name<span class="required">*</span></label>
+    <input type="text" id="fname" name="username" placeholder="Enter Your name Here..." required>
+    {% csrf_token %}
+    <label for="lname">Email<span class="required">*</span></label>
+    <input type="text" id="lname" name="email_Id" placeholder=" Enter Your Email Here..." required >
+
+    <label for="lname">Mobile No<span class="required">*</span></label>
+    <input type="text" id="lname" name="phone_no" placeholder=" Enter Your Mobile Number Here..." required>
+
+    <label for="lname">Address<span class="required">*</span></label>
+    <input type="text" id="lname" name="Address" placeholder=" Enter Your Address Here..." required>
+
+    <label for="lname">City<span class="required">*</span></label>
+    <input type="text" id="lname" name="city" placeholder=" Enter Your City Here..." required>
+
+
+
+    <label for="subject">Ask Anything</label>
+    <textarea id="subject" name="details" placeholder="ask something.." style="height:200px"></textarea>
+
+    <input type="submit"  value="Submit">
+  </form>
+</div>
+<footer class="text-muted">
+    <div class="container text-center">
+     &copy; Ravishankar, {% now "Y" %}
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
