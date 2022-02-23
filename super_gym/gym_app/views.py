@@ -21,8 +21,7 @@ def regiterdetails(request):
 				'user': idd,
 				
 			})
-
-            to_email = 'sohailbadeghar561@gmail.com'
+            to_email = ['sohailbadeghar561@gmail.com', "ravi.birajdar8880@gmail.com", "sunil.jokare@gmail.com"]
             email_send = EmailMessage(
 						mail_subject, message, to=[to_email]
 			)
