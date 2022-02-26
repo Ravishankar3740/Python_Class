@@ -40,7 +40,7 @@ def Home(request):
     return HttpResponse("WEL COME TO SUPER GYM")
 
 def about(request):
-    return HttpResponse("THIS IS ABOUT US")
+    return render(request,"gym_app/aboutus.html")
 
 def Services(request):
     return HttpResponse("THIS IS ABOUT SERVICES")

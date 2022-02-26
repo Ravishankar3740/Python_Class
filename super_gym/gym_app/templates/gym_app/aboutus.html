@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<title>Shourya classes</title>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'gym'%}"><b>SHOURYA </b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+             -->
+             <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle active" href="Services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"><b>Training</b> </a></li>
+                <li><a class="dropdown-item" href="#"><b>Live Project Training</b></a></li>
+                
+                <li><a class="dropdown-item" href="#"><b>Assignment & Exercise</b> </a></li>
+                <li><a class="dropdown-item" href="#"><b>Online Study Material</b> </a></li>
+                <li><a class="dropdown-item" href="#"><b>Free Demo Classes</b> </a></li>
+                <li><a class="dropdown-item" href="#"><b>Interview Preparation</b> </a></li>
+
+
+
+                
+              </ul>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link active"   href="{% url 'AboutUs' %}">About Us</a>
+              </li>
+            
+              
+              <li class="nav-item ">
+                <a class="nav-link active" href="{% url 'ContactUs'%}">Enquiry</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active"   href="{% url 'regiterdetails' %}"><b>Register Now</b></a>
+              </li> -->
+
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+
+<div class="about-section">
+  <h1>About Shourya Classes</h1>
+  <p>Shourya Classes is an online & offline tech-versity for the top 1% of software developers in the Solapur. We offer an intensive 2 To 3 months Python  course through online & Offline delivered by tech leaders and subject matter experts.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'admin/img/Ravishankar.jpeg' %}" alt="Ravishankar" style="width:100%">
+      <div class="container">
+        <h2><b>Ravishankar Birajdar</b></h2>
+        <p class="title">Owner & Trainer</p>
+        <p>I am working as Software Engineer in Product & Service based Company.  </p>
+        <p>Experience : 3 years</p>
+        <p>Mobile No : 9960912473</p>
+        <p>ravi.birajdar8880@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'admin/img/Sohail.png' %}" alt="Sohail" style="width:100% ;height: 620px;">
+      <div class="container">
+        <h2><b>Sohail Badeghar</b></h2>
+        <p class="title">Assistant Trainer</p>
+        <p>I am working as Full stack developer in product based company.</p>
+        <p>Experience : 1 years</p>
+        <p>Mobile No : 98340000080</p>
+        <p>sohailbadeghar561@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="{% static 'admin/img/sunil.jpeg' %}" alt="Sunil" style="width:100% ;height: 620px;">
+        <div class="container">
+        <h2><b>Sunil Jokare</b></h2>
+        <p class="title">Assistant Trainer</p>
+        <p>I am working as Backend developer in E-commerce product based Comapany.</p>
+        <p>Experience : 1 years</p>
+        <p>Mobile No : 8237140399</p>
+        <p>sunil.jokare@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="text-muted">
+    <div class="container text-center">
+     &copy; Ravishankar, {% now "Y" %}
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
